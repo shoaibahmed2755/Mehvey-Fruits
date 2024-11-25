@@ -1,6 +1,5 @@
 :root {
-    --pink: rgb(231, 184, 30);
-
+    --pink: #FFC300
 }
 
 * {
@@ -37,15 +36,40 @@ section {
 
 .heading span {}
 
-.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    border-radius: 5rem;
-    background: #fff;
-    padding: .9rem 3.5rem;
+/* Button styles */
+.button {
+    width: 180px;
+    height: 40px;
+    background-image: linear-gradient(#FFC300   , #FFC300);
+    border: none;
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     cursor: pointer;
-    font-size: 1.7rem;
+    box-shadow: 1px 3px 0px #d8be6a;
+    transition-duration: .3s;
 }
+
+.cartIcon {
+    width: 14px;
+    height: fit-content;
+}
+
+.cartIcon path {
+    fill: white;
+}
+
+/* Active button state */
+.button:active {
+    transform: translate(2px, 0px);
+    box-shadow: 0px 1px 0px rgb(139, 113, 255);
+    padding-bottom: 1px;
+}
+
 
 .btn:hover {
     background: var(--pink);
@@ -114,7 +138,7 @@ header .fa-bars {
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(/IMAGES/BG-2.avif) no-repeat;
+    background: url(/Side\ Fruites.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -125,16 +149,23 @@ header .fa-bars {
 
 .home .content h3 {
     font-size: 5rem;
-    color: rgb(192, 143, 87);
+    color: #000000;
 }
 
 .home .content span {
     font-size: 3rem;
-    color: rgb(229, 138, 138);
+    color: #FFC300;
     padding: 1rem 0;
     line-height: 1.5;
+    display: inline;
 }
-
+.home .content span p{
+    font-size: 3rem;
+    color: rgb(194, 229, 138);
+    padding: 1rem 0;
+    line-height: 1.5;
+    display: inline;
+}
 .home .content p {
     font-size: 1.1rem;
     color: #504f4f;
